@@ -1,0 +1,12 @@
+{% extends "_layouts/site" %}
+
+{% block main %}
+<div class="container">
+  <div class="row">
+    <div class="col-12 mt-medium mb-medium text-center float-xs-center">
+      <h1>Thanks for sending that in, {{ craft.request.getQuery('from') }}!</h1>
+      <a href="{{ siteUrl }}" class="btn btn-primary btn-lg mt-3">Return to homepage</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

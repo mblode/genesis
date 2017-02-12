@@ -1,0 +1,36 @@
+$font-family:
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  "Roboto",
+  "Helvetica Neue", Arial, sans-serif !default;
+
+$heading-font: $font-family;
+
+$black: rgba(0, 0, 0, .87);
+$black-secondary: rgba(0, 0, 0, .54);
+$dividers: rgba(0, 0, 0, .12);
+$white-dividers: rgba(255, 255, 255, .12);
+
+$white: #fff;
+$white-secondary: rgba(255, 255, 255, .7);
+$light-grey: #E3EEFC;
+
+$primary: #007ee5;
+$lighter: #7b8994;
+$light: #7b8994;
+$darker: #3d464d;
+$accent: #15CD72;
+
+$primary-gradient: linear-gradient(180deg, lighten($primary, 10), $primary);
+$primary-shadow: 1px 1px 4px rgba(0, 126,	229, .5);
+
+$tiny: 8px;
+$small: 16px;
+$base: 24px;
+$large: 48px;
+$x-large: 64px;
+$xx-large: 128px;
+
+$trans: .3s ease-in-out;
+$border: 1px solid $dividers;

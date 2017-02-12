@@ -1,0 +1,142 @@
+body {
+  margin-top: 54px;
+}
+
+b {
+  font-weight: bold !important;
+}
+
+.white-secondary {
+  color: rgba(255, 255, 255, .7);
+}
+
+hr.white {
+  border-top: 1px solid rgba(255, 255, 255, .12);
+}
+
+.container {
+  max-width: 1000px !important;
+}
+
+.header {
+  padding-bottom: $xx-large;
+  padding-top: $xx-large;
+}
+
+.final {
+  background: $primary;
+  padding-bottom: $large;
+  padding-top: $large;
+}
+
+.section {
+  padding-bottom: $x-large;
+  padding-top: $x-large;
+}
+
+.grey {
+  background: $light-grey;
+}
+
+.primary {
+  background: $primary;
+  padding-bottom: $x-large;
+  padding-top: $x-large;
+}
+
+.gradient {
+  background: $primary-gradient;
+}
+
+.table p {
+  font-size: 14px !important;
+  margin-bottom: 0;
+}
+
+.alert-white {
+  background: $white;
+  border: 1px solid $primary;
+  box-shadow: $primary-shadow;
+
+  .close span {
+    color: $primary;
+  }
+
+  simpla-text {
+    display: inline-block;
+  }
+
+
+  .btn-close {
+    padding: 12px;
+  }
+
+  p {
+    color: $primary;
+    font-size: 16px;
+    margin: 0;
+    display: inline-block;
+  }
+}
+
+.markdown p {
+  font-size: 16px;
+}
+
+.mb-large {
+  margin-bottom: 100px;
+}
+
+.card-header {
+  border-bottom: none;
+}
+
+.card-service {
+  box-shadow: 0 1px 4px rgba(0,0,0,.04);
+  transition: $trans;
+
+  .card-block {
+    margin: 16px;
+  }
+
+  a, 
+  a:hover,
+  a:active,
+  a:focus {
+    text-decoration: none !important;
+    color: $black;
+  }
+}
+
+.hov:hover,
+.hov:active,
+.hov:focus {
+  box-shadow: 0 10px 20px rgba(0,0,0,.12);
+  transform: translateY(-5px);
+
+  button {
+    background: darken($primary, 10);
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-service .card-block {
+      margin: 24px;
+  }
+}
+
+.premium {
+  background: $accent;
+}
+
+.basic {
+  background: $primary !important;
+}
+
+.font-normal {
+  font-weight: normal;
+}
+
+
+

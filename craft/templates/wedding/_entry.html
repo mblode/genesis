@@ -1,0 +1,192 @@
+{% extends "_layouts/site" %}
+
+{% set image = entry.featureImage.first() %} {% set transformedImages = craft.imager.transformImage(image, [ { width: 1250, ratio: 3/1 }, { width: 800, ratio: 3/1 }, { width: 450, ratio: 3/1, jpegQuality: 65 }, ], { format: 'jpg', allowUpscale: false,
+mode: 'crop', jpegQuality: 80, position: image.focusPctX ~ '% ' ~ image.focusPctY ~ '%', interlace: true } ) %}
+
+{% block main %}
+  <div class="thumbnail text-center mb-medium">
+    <img class="img-fluid lazyload"
+         src="{{ craft.imager.base64Pixel(2,1) }}"
+         data-sizes="100vw"
+         data-srcset="{{ craft.imager.srcset(transformedImages) }}"
+         alt="Jeremy Blode Australian Weddings">
+    <div class="caption">
+      <h1 class="display-1">{{entry.title | typogrify}}</h1>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+
+      {% for block in entry.blogImages %}
+
+        {% if block.type == "fullWidth" %}
+          {% set image = block.fullWidth.first() %} {% set transformedImages = craft.imager.transformImage(image, [ { width: 1000, ratio: 2/1.15 }, { width: 600, ratio: 2/1.15 }, { width: 400, ratio: 2/1.15, jpegQuality: 65 }, ], { format: 'jpg', allowUpscale: false,
+        mode: 'crop', jpegQuality: 80, position: image.focusPctX ~ '% ' ~ image.focusPctY ~ '%', interlace: true } ) %}
+          <div class="col-12 mb-medium">
+              <img class="img-fluid lazyload"
+                   src="{{ craft.imager.base64Pixel(2,1) }}"
+                   data-sizes="100vw"
+                   data-srcset="{{ craft.imager.srcset(transformedImages) }}"
+                   alt="Jeremy Blode Australian Weddings">
+          </div>
+
+        {% elseif block.type == "halfHalf" %}
+          {% set image = block.firstHalf.first() %} {% set transformedImages = craft.imager.transformImage(image, [ { width: 485, ratio: 2/3 }, { width: 400, ratio: 2/3 }, { width: 400, ratio: 2/3, jpegQuality: 65 }, ], { format: 'jpg', allowUpscale: false, mode:
+'crop', jpegQuality: 80, position: image.focusPctX ~ '% ' ~ image.focusPctY ~ '%', interlace: true } ) %}
+          <div class="col-12 col-sm-6 mb-medium">
+            <img class="img-fluid lazyload"
+                 src="{{ craft.imager.base64Pixel(2,1) }}"
+                 data-sizes="100vw"
+                 data-srcset="{{ craft.imager.srcset(transformedImages) }}"
+                 alt="Jeremy Blode Australian Weddings">
+          </div>
+
+          {% set image = block.secondHalf.first() %} {% set transformedImages = craft.imager.transformImage(image, [ { width: 485, ratio: 2/3 }, { width: 400, ratio: 2/3 }, { width: 400, ratio: 2/3, jpegQuality: 65 }, ], { format: 'jpg', allowUpscale: false, mode:
+'crop', jpegQuality: 80, position: image.focusPctX ~ '% ' ~ image.focusPctY ~ '%', interlace: true } ) %}
+          <div class="col-12 col-sm-6 mb-medium">
+            <img class="img-fluid lazyload"
+                 src="{{ craft.imager.base64Pixel(2,1) }}"
+                 data-sizes="100vw"
+                 data-srcset="{{ craft.imager.srcset(transformedImages) }}"
+                 alt="Jeremy Blode Australian Weddings">
+          </div>
+
+        {% elseif block.type == "fourSquares" %}
+
+          {% set image = block.topLeft.first() %} {% set transformedImages = craft.imager.transformImage(image, [ { width: 1000, ratio: 1/1 }, { width: 600, ratio: 1/1 }, { width: 300, ratio: 1/1, jpegQuality: 65 }, ], { format: 'jpg', allowUpscale: false, mode:
+'crop', jpegQuality: 80, position: image.focusPctX ~ '% ' ~ image.focusPctY ~ '%', interlace: true } ) %}
+
+          <div class="col-12 col-sm-6 mb-medium">
+            <img class="img-fluid lazyload"
+                 src="{{ craft.imager.base64Pixel(2,1) }}"
+                 data-sizes="100vw"
+                 data-srcset="{{ craft.imager.srcset(transformedImages) }}"
+                 alt="Jeremy Blode Australian Weddings">
+          </div>
+
+         {% set image = block.topRight.first() %} {% set transformedImages = craft.imager.transformImage(image, [ { width: 1000, ratio: 1/1 }, { width: 600, ratio: 1/1 }, { width: 300, ratio: 1/1, jpegQuality: 65 }, ], { format: 'jpg', allowUpscale: false, mode:
+'crop', jpegQuality: 80, position: image.focusPctX ~ '% ' ~ image.focusPctY ~ '%', interlace: true } ) %}
+
+          <div class="col-12 col-sm-6 mb-medium">
+            <img class="img-fluid lazyload"
+                 src="{{ craft.imager.base64Pixel(2,1) }}"
+                 data-sizes="100vw"
+                 data-srcset="{{ craft.imager.srcset(transformedImages) }}"
+                 alt="Jeremy Blode Australian Weddings">
+          </div>
+
+          {% set image = block.bottomLeft.first() %} {% set transformedImages = craft.imager.transformImage(image, [ { width: 1000, ratio: 1/1 }, { width: 600, ratio: 1/1 }, { width: 300, ratio: 1/1, jpegQuality: 65 }, ], { format: 'jpg', allowUpscale: false, mode:
+'crop', jpegQuality: 80, position: image.focusPctX ~ '% ' ~ image.focusPctY ~ '%', interlace: true } ) %}
+          <div class="col-12 col-sm-6 mb-medium">
+            <img class="img-fluid lazyload"
+                 src="{{ craft.imager.base64Pixel(2,1) }}"
+                 data-sizes="100vw"
+                 data-srcset="{{ craft.imager.srcset(transformedImages) }}"
+                 alt="Jeremy Blode Australian Weddings">
+          </div>
+
+          {% set image = block.bottomRight.first() %} {% set transformedImages = craft.imager.transformImage(image, [ { width: 1000, ratio: 1/1 }, { width: 600, ratio: 1/1 }, { width: 300, ratio: 1/1, jpegQuality: 65 }, ], { format: 'jpg', allowUpscale: false, mode:
+'crop', jpegQuality: 80, position: image.focusPctX ~ '% ' ~ image.focusPctY ~ '%', interlace: true } ) %}
+
+          <div class="col-12 col-sm-6 mb-medium">
+            <img class="img-fluid lazyload"
+                 src="{{ craft.imager.base64Pixel(2,1) }}"
+                 data-sizes="100vw"
+                 data-srcset="{{ craft.imager.srcset(transformedImages) }}"
+                 alt="Jeremy Blode Australian Weddings">
+          </div>
+
+        {% elseif block.type == "twoThirdsOneThird" %}
+          {% set image = block.twoThirds.first() %} {% set transformedImages = craft.imager.transformImage(image, [ { width: 636, height: 500 }, { width: 300, height: 500, jpegQuality: 65 }, ], { format: 'jpg', allowUpscale: false, mode:
+'crop', jpegQuality: 80, position: image.focusPctX ~ '% ' ~ image.focusPctY ~ '%', interlace: true } ) %}
+          <div class="col-12 col-sm-8 mb-medium">
+            <img class="img-fluid lazyload"
+                 src="{{ craft.imager.base64Pixel(2,1) }}"
+                 data-sizes="100vw"
+                 data-srcset="{{ craft.imager.srcset(transformedImages) }}"
+                 alt="Jeremy Blode Australian Weddings">
+          </div>
+
+          {% set image = block.oneThird.first() %} {% set transformedImages = craft.imager.transformImage(image, [ { width: 303, height: 500 }, { width: 303, height: 500, jpegQuality: 65 }, ], { format: 'jpg', allowUpscale: false, mode:
+'crop', jpegQuality: 80, position: image.focusPctX ~ '% ' ~ image.focusPctY ~ '%', interlace: true } ) %}
+          <div class="col-12 col-sm-4 mb-medium">
+            <img class="img-fluid lazyload"
+                 src="{{ craft.imager.base64Pixel(2,1) }}"
+                 data-sizes="100vw"
+                 data-srcset="{{ craft.imager.srcset(transformedImages) }}"
+                 alt="Jeremy Blode Australian Weddings">
+          </div>
+        {% elseif block.type == "oneThirdTwoThirds" %}
+          {% set image = block.oneThird.first() %} {% set transformedImages = craft.imager.transformImage(image, [ { width: 303, height: 500 }, { width: 303, height: 500, jpegQuality: 65 }, ], { format: 'jpg', allowUpscale: false, mode:
+'crop', jpegQuality: 80, position: image.focusPctX ~ '% ' ~ image.focusPctY ~ '%', interlace: true } ) %}
+          <div class="col-12 col-sm-4 mb-medium">
+            <img class="img-fluid lazyload"
+                 src="{{ craft.imager.base64Pixel(2,1) }}"
+                 data-sizes="100vw"
+                 data-srcset="{{ craft.imager.srcset(transformedImages) }}"
+                 alt="Jeremy Blode Australian Weddings">
+          </div>
+
+
+          {% set image = block.twoThirds.first() %} {% set transformedImages = craft.imager.transformImage(image, [ { width: 636, height: 500 }, { width: 300, height: 500, jpegQuality: 65 }, ], { format: 'jpg', allowUpscale: false, mode:
+'crop', jpegQuality: 80, position: image.focusPctX ~ '% ' ~ image.focusPctY ~ '%', interlace: true } ) %}
+          <div class="col-12 col-sm-8 mb-medium">
+            <img class="img-fluid lazyload"
+                 src="{{ craft.imager.base64Pixel(2,1) }}"
+                 data-sizes="100vw"
+                 data-srcset="{{ craft.imager.srcset(transformedImages) }}"
+                 alt="Jeremy Blode Australian Weddings">
+          </div>
+        {% endif %}
+
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="primary-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center pt-large pb-large">
+        <h1 class="mb-medium white">Explore more weddings</h1>
+      </div>
+      {% set relatedEntries = craft.entries({
+          section: 'wedding',
+          id: 'not ' ~ entry.id,
+          order: 'postDate desc',
+          limit: 3,
+      }) %}
+      {% for entry in relatedEntries %}
+      <div class="col-12 col-md-4 mb-medium">
+        <a href="{{ entry.url }}" class="white post--link">
+        {% set image = entry.featureImage.first() %}
+        {% set transformedImages = craft.imager.transformImage(image,
+            [
+                { width: 800, ratio: 4/3 },
+                { width: 600, ratio: 4/3 },
+                { width: 400, ratio: 4/3, jpegQuality: 65 },
+            ],
+            {
+                format: 'jpg',
+                allowUpscale: false,
+                mode: 'crop',
+                jpegQuality: 80,
+                position: image.focusPctX ~ '% ' ~ image.focusPctY ~ '%',
+                interlace: true
+            }
+        ) %}
+        <img class="img-fluid lazyload"
+             src="{{ craft.imager.base64Pixel(2,1) }}"
+             data-sizes="100vw"
+             data-srcset="{{ craft.imager.srcset(transformedImages) }}"
+             alt="Jeremy Blode Australian Weddings">
+          <h3 class="mt-2 mb-3 white">{{ entry.title }}</h3>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

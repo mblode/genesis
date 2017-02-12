@@ -1,0 +1,81 @@
+{% extends "_layouts/site" %}
+
+{% block main %}
+<header class="header gradient">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1 class="text-center white">{{entry.title}} Minecraft Server</h1>
+        {% for block in entry.minecraftDetail %}
+          {% if block.type == "detail" %}
+            <ul class="list-group">
+              <li class="list-group-item">{{block.detail | typogrify}}</li>
+            </ul>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container section">
+  <div class="row">
+    <div class="col text-center">
+      <h2>Straightforward pricing</h2>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid mb-large">
+  <div class="PriceBlocks-sliderContainer PriceBlocks-slider--standalone">
+    <div class="PriceBlocks-slider PriceBlocks-slider--standard">
+      {% for block in entry.slider %}
+        {% if block.type == "budget" %}
+          <div class="PriceBlock-container">
+            <div class="PriceBlock">
+              <div class="PriceBlock-top">
+                <div class="u-flex u-flexCenter PriceBlock-price">
+                  <span class="PriceBlock-dollar">$</span>
+                  <span class="PriceBlock-num">{{block.price}}</span>
+                  <span class="PriceBlock-time">/mo</span>
+                </div>
+              </div>
+              <ul class="u-list u-textPrimary u-textLarge PriceBlock-list">
+                <li><strong class="u-textPrimary">{{block.ram}}GB</strong> Ram</li>
+                <li><strong class="u-textPrimary">{{block.slots}}</strong> Slots</li>
+                <li><strong class="u-textPrimary">{{block.disk}}</strong> Disk</li>
+                <li><strong class="u-textPrimary">{{block.ddos}}</strong> DDoS</li>
+              </ul>
+              <div class="u-flex u-flexCenter PriceBlock-btn">
+                <a href="{{block.WHMCSUrl}}" class="btn btn-outline-primary" target="_blank">Order</a>
+              </div>
+            </div>
+          </div>
+        {% elseif block.type == "premium" %}
+          <div class="PriceBlock-container">
+            <div class="PriceBlock">
+              <div class="PriceBlock-top">
+                <div class="u-flex u-flexCenter PriceBlock-price">
+                  <span class="PriceBlock-dollar">$</span>
+                  <span class="PriceBlock-num">{{block.price}}</span>
+                  <span class="PriceBlock-time">/mo</span>
+                </div>
+              </div>
+              <ul class="u-list u-textSuccess u-textLarge PriceBlock-list">
+                <li><strong class="u-textSuccess">{{block.ram}}GB</strong> Ram</li>
+                <li><strong class="u-textSuccess">{{block.slots}}</strong> Slots</li>
+                <li><strong class="u-textSuccess">{{block.disk}}</strong> Disk</li>
+                <li><strong class="u-textSuccess">{{block.ddos}}</strong> DDoS</li>
+              </ul>
+              <div class="u-flex u-flexCenter PriceBlock-btn">
+                <a href="{{block.WHMCSUrl}}" class="btn btn-success" target="_blank">Order</a>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+footer {
+  background: $darker;
+  padding-bottom: $large;
+  padding-top: $large;
+
+  .nav-link {
+    color: $white-secondary;
+
+    &:hover {
+      color: $white !important;
+    }
+  }
+
+  .active {
+    color: $white !important;
+  }
+}

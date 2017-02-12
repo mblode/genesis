@@ -1,0 +1,113 @@
+{% extends "_layouts/site" %}
+
+{% block main %}
+
+<header class="gradient white text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="alert alert-success alert-white alert-dismissible fade show mt-3" role="alert">
+          <button type="button" class="btn-close close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <span class="text-primary">{{entry.coupon | typogrify}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container header">
+    <div class="row">
+      <div class="col">
+        {{entry.tagline | typogrify}}
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="section grey">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2 class="text-center mb-3">Our services</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-5 mb-3 offset-lg-1">
+        <div class="card card-service hov">
+          <a href="{{siteUrl}}minecraft">
+            <div class="card-block">
+              <h3 class="card-title">Minecraft Hosting</h3>
+              <h3>$1.00 <span class="small">/ month</span></h3>
+              <hr>
+              <ul>
+                <li>Unlimited Slots</li>
+                <li>SSD Disks</li>
+                <li>Free DDoS</li>
+                <li>Multicraft Support</li>
+                <li>Daily Backups</li>
+                <li>100 Mbps Speeds</li>
+              </ul>
+              <hr>
+              <button class="btn btn-primary btn-block btn-lg mt-2">Get started</button>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-5 mb-3">
+        <div class="card card-service hov">
+          <a href="{{siteUrl}}hosting">
+            <div class="card-block">
+              <h3 class="card-title">Website Hosting</h3>
+              <h3>$2.00 <span class="small">/ month</span></h3>
+              <hr>
+              <ul>
+                <li>Unlimited bandwidth</li>
+                <li>HDD Disks</li>
+                <li>Free DDoS</li>
+                <li>CPanel Interface</li>
+                <li>Daily Backups</li>
+                <li>99.9% Uptime</li>
+              </ul>
+              <hr>
+              <button class="btn btn-primary btn-block btn-lg mt-2">Get started</button>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section container">
+  <div class="row">
+    <div class="col">
+      <h2 class="text-center">Our stats</h2>
+      <hr>
+    </div>
+  </div>
+  <div class="row text-center stats">
+  {% for block in entry.stats %}
+    {% if block.type == "customer" %}
+      <div class="col">
+        <h3>{{block.number}}</h3>
+        <p>{{block.customerTitle}}</p>
+      </div>
+    {% elseif block.type == "services" %}
+    <div class="col">
+      <h3>{{block.number}}</h3>
+      <p>{{block.servicesTitle}}</p>
+    </div>
+    {% elseif block.type == "ram" %}
+    <div class="col">
+      <h3>{{block.number}}</h3>
+      <p>{{block.ramTitle}}</p>
+    </div>
+    {% endif %}
+  {% endfor %}
+  </div>
+</div>
+
+{% include "_includes/final" %}
+{% endblock %}

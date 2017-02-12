@@ -1,0 +1,36 @@
+<nav class="navbar navbar-toggleable-sm fixed-top navbar-light">
+  <div class="container">
+    <div class="row justify-content-between">
+        <button class="navbar-toggler navbar-toggler-right hidden-md-up collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+
+    <a class="navbar-brand mr-auto" href="{{ siteUrl }}">
+        Genesis Hosting Co.
+      </a>
+
+    <div class="navbar-collapse collapse" id="navbarResponsive">
+      {% set menu = craft.entries.section('menu') %}
+      <ul class="navbar-nav ml-auto mt-2 mt-md-0">
+        {% nav link in menu | reverse%}
+        <li class="nav-item">
+          {% if link.relatedEntry|length %}
+          <a href="{{ link.relatedEntry[0].url }}" class="nav-link {% if craft.request.url == link.relatedEntry[0].url %}active{% endif %}">{{ link.title }}</a> {% else %}
+          <a href="{{ siteUrl }}{{ link.customUrl }}" class="nav-link {% if craft.request.firstSegment == link.customUrl %}active{% endif %}">{{ link.title }}</a> {% endif %}
+        </li>
+        {% endnav %}
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#"><span>Log in</span></a>
+        </li>
+        <li class="nav-item hidden-sm-down ml-2">
+        <a class="btn btn-primary btn-sign" href="#">Sign up</a>
+        </li>
+        <li class="nav-item hidden-md-up">
+          <a class="nav-link" href="#"><span>Sign up</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

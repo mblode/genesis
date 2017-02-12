@@ -1,0 +1,22 @@
+{% extends "_layouts/base" %}
+
+{% if bodyClass is not defined %}
+  {% set bodyClass = entry is defined ? entry.section.handle : craft.request.firstSegment %}
+{% endif %}
+
+{% if nav[bodyClass] is defined %}
+  {% set title %}{% if title is defined %}{{ title }} - {% endif %}{{ nav[bodyClass].title }}{% endset %}
+{% endif %}
+
+
+{% block body %}
+  {% include "_includes/nav" %}
+
+  <main id="main" role="main">
+    {% block main %}{% endblock %}
+  </main>
+
+  {% include "_includes/footer" %}
+
+  <a href="#0" class="cd-top">Top</a>
+{% endblock %}

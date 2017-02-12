@@ -1,0 +1,43 @@
+nav {
+  box-shadow: 0 1px 5px $dividers;
+  background: #fff !important;
+
+  @media (max-width: 767px) {
+    .btn-sign {
+      margin-top: 8px;
+    }
+
+    .nav-link {
+      font-size: 18px;
+
+      span {
+        color: $darker;
+      }
+
+      span:hover {
+        color: darken($darker, 10);
+      }
+    }
+  }
+
+  @media (max-width: 562px) {
+    .container {
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+  }
+}
+
+nav .active {
+  color: $black !important;
+}
+
+.nav-link:hover {
+  color: $black !important;
+}
+
+// @media (min-width: 768px) {
+//   .navbar-toggleable-sm>.container {
+//     display: block;
+//   }
+// }
