@@ -32,7 +32,9 @@ Thumbs.db
 # BUILD FILES
 # aaw -- 2015-09-27
 /bower_components/*
-/node_modules/
+/node_modules/*
 /build/*
 
 /.env.php
+/public/__github-refresher.php
+/scripts/.env.sh
