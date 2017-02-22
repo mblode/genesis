@@ -15,18 +15,31 @@
 </header>
 
 <div class="container section">
-	<div class="row">
-		<div class="col text-center">
-			<h2>Straightforward pricing</h2>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-12 text-center">
+      <h2>Minecraft Features</h2>
+    </div>
+
+    {% for entry in craft.entries.section('minecraft').limit(1) %}
+      {% for block in entry.features %}
+        {% if block.type == "feature" %}
+          <div class="col-6 col-md-4 col-lg-3 home-feature text-center mt-3">
+            {% set image = block.photo.first() %}
+            <img src="{{image.url}}" alt="{{image.title}}">
+            <h4>{{block.featureName}}</h4>
+            <p class="small">{{block.text}}</p>
+          </div>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </div>
 </div>
 
 <div class="section grey">
   <div class="container">
     <div class="row">
       <div class="col">
-        <h2 class="text-center mb-3">Our services</h2>
+        <h2 class="text-center mb-medium">Our services</h2>
       </div>
     </div>
     

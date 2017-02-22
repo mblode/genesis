@@ -6579,10 +6579,10 @@ hr.white {
   box-shadow: 1px 1px 4px rgba(0, 126, 229, 0.5); }
   .alert-white .close span {
     color: #007ee5; }
-  .alert-white simpla-text {
-    display: inline-block; }
   .alert-white .btn-close {
     padding: 12px; }
+    .alert-white .btn-close span {
+      line-height: 1; }
   .alert-white p {
     color: #007ee5;
     font-size: 16px;
@@ -6634,6 +6634,9 @@ hr.white {
 .font-normal {
   font-weight: normal; }
 
+.mb-medium {
+  margin-bottom: 32px; }
+
 html {
   color: rgba(0, 0, 0, 0.87); }
 
@@ -6641,7 +6644,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  line-height: 1.5; }
+  line-height: 1.4; }
 
 button,
 input,
@@ -6651,13 +6654,7 @@ textarea {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  line-height: 1.5; }
-
-::-moz-selection {
-  background: #007ee5; }
-
-::selection {
-  background: #007ee5; }
+  line-height: 1.4; }
 
 .title {
   font-size: 50px;
@@ -6671,7 +6668,7 @@ textarea {
   letter-spacing: -.003em; }
 
 p {
-  font-size: 18px; }
+  font-size: 17px; }
 
 .white {
   color: #fff; }
@@ -6721,6 +6718,9 @@ h2 {
 b,
 strong {
   font-weight: bold; }
+
+.small {
+  font-size: 90% !important; }
 
 .btn-primary {
   background: #007ee5;

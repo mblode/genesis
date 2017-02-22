@@ -62,13 +62,12 @@ hr.white {
     color: $primary;
   }
 
-  simpla-text {
-    display: inline-block;
-  }
-
 
   .btn-close {
     padding: 12px;
+    span {
+      line-height: 1;
+    }
   }
 
   p {
@@ -138,5 +137,7 @@ hr.white {
   font-weight: normal;
 }
 
-
+.mb-medium {
+  margin-bottom: 32px;
+}
 

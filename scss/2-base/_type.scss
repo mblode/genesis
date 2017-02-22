@@ -6,7 +6,7 @@ body {
   font-family: $font-family;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 button,
@@ -17,11 +17,7 @@ textarea {
   font-family: $font-family;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  line-height: 1.5;
-}
-
-::selection {
-  background: $primary;
+  line-height: 1.4;
 }
 
 .title {
@@ -38,7 +34,7 @@ textarea {
 }
 
 p {
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .white {
@@ -110,4 +106,8 @@ h2 {
 b,
 strong {
   font-weight: bold;
+}
+
+.small {
+  font-size: 90% !important;
 }
