@@ -6542,9 +6542,6 @@ b {
 hr.white {
   border-top: 1px solid rgba(255, 255, 255, 0.12); }
 
-.container {
-  max-width: 1000px !important; }
-
 .header {
   padding-bottom: 128px;
   padding-top: 128px; }
@@ -6633,6 +6630,9 @@ hr.white {
 
 .font-normal {
   font-weight: normal; }
+
+.mt-medium {
+  margin-bottom: 32px; }
 
 .mb-medium {
   margin-bottom: 32px; }

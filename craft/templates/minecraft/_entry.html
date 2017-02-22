@@ -13,25 +13,6 @@
 
 <div class="container section">
   <div class="row">
-    <div class="col-12 text-center">
-      <h2>Minecraft Features</h2>
-    </div>
-
-    {% for block in entry.features %}
-      {% if block.type == "feature" %}
-        <div class="col-6 col-md-4 col-lg-3 home-feature text-center mt-3">
-          {% set image = block.photo.first() %}
-          <img src="{{image.url}}" alt="{{image.title}}">
-          <h4>{{block.featureName}}</h4>
-          <p class="small">{{block.text}}</p>
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-</div>
-
-<div class="container section">
-  <div class="row">
     <div class="col text-center">
       <h2>Choose your plan to get started</h2>
     </div>

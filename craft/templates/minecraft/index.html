@@ -16,18 +16,18 @@
 
 <div class="container section">
   <div class="row">
-    <div class="col-12 text-center">
+    <div class="col-12 text-center mb-medium">
       <h2>Minecraft Features</h2>
     </div>
 
-    {% for entry in craft.entries.section('minecraft').limit(1) %}
+    {% for entry in craft.entries.section('homepage') %}
       {% for block in entry.features %}
         {% if block.type == "feature" %}
-          <div class="col-6 col-md-4 col-lg-3 home-feature text-center mt-3">
+          <div class="col-6 col-md-4 home-feature text-center mt-medium">
             {% set image = block.photo.first() %}
-            <img src="{{image.url}}" alt="{{image.title}}">
-            <h4>{{block.featureName}}</h4>
-            <p class="small">{{block.text}}</p>
+            <img src="{{image.url}}" alt="{{image.title}}" width="72px" class="mb-3">
+            <h4 class="mb-2">{{block.featureName}}</h4>
+            <p>{{block.text}}</p>
           </div>
         {% endif %}
       {% endfor %}
