@@ -19,7 +19,7 @@ GLOBAL_DB_TABLE_PREFIX="craft_"
 # -- LOCAL settings --
 
 # Local path constants; paths should always have a trailing /
-LOCAL_ROOT_PATH="/Users/mblode/Sites/jeremy/"
+LOCAL_ROOT_PATH="/Users/mblode/Sites/genesis/"
 LOCAL_ASSETS_PATH=${LOCAL_ROOT_PATH}"public/assets/"
 
 # Local user & group that should own the Craft CMS install
@@ -38,7 +38,7 @@ LOCAL_ASSETS_DIRS=(
                 )
 
 # Local database constants
-LOCAL_DB_NAME="jeremy"
+LOCAL_DB_NAME="genesis"
 LOCAL_DB_PASSWORD="blode123"
 LOCAL_DB_USER="mblode"
 
@@ -49,7 +49,7 @@ LOCAL_MYSQLDUMP_CMD="mysqldump"
 # -- REMOTE settings --
 
 # Remote ssh credentials, user@domain.com and Remote SSH Port
-REMOTE_SSH_LOGIN="serverpilot@188.166.210.0"
+REMOTE_SSH_LOGIN="forge@188.166.210.0"
 REMOTE_SSH_PORT="22"
 
 # Remote path constants; paths should always have a trailing /

@@ -1,8 +1,8 @@
 {
-  "name": "jbp-fort",
+  "name": "genesis",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "jbp.qajitgptedd0cpeq@deploy.us1.frbit.com:jbp.git",
+  "repository": "https://github.com/mblode/genesis.git",
   "author": "Matthew Blode <m.blode@gmail.com>",
   "license": "MIT",
   "dependencies": {
