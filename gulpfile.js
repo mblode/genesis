@@ -1,51 +1,69 @@
 var gulp = require('gulp'),
-    plumber = require('gulp-plumber'),
-    rename = require('gulp-rename');
-var autoprefixer = require('gulp-autoprefixer');
-var babel = require('gulp-babel');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var minifycss = require('gulp-minify-css');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
+  concat = require('gulp-concat'),
+  stripdebug = require('gulp-strip-debug'),
+  uglify = require('gulp-uglify'),
+  sass = require('gulp-sass'),
+  postcss = require('gulp-postcss'),
+  autoprefixer = require('autoprefixer'),
+  mqpacker = require('css-mqpacker'),
+  cssnano = require('cssnano'),
+  browserSync = require('browser-sync'),
+  folder = {
+    src: 'src/',
+    build: 'public/assets/',
+  };
 
-gulp.task('styles', function(){
-  gulp.src(['scss/**/*.scss'])
-    .pipe(sourcemaps.init())
-    .pipe(plumber({
-      errorHandler: function (error) {
-        console.log(error.message);
-        this.emit('end');
-    }}))
-    .pipe(sass())
-    .pipe(autoprefixer('last 2 versions'))
-    .pipe(sourcemaps.write('/'))
-    .pipe(gulp.dest('public/assets/css/'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(minifycss())
-    .pipe(gulp.dest('public/assets/css/'))
+gulp.task('browser-sync', function () {
+  browserSync({
+    proxy:  'https://genesis.dev',
+  });
 });
 
-gulp.task('scripts', function(){
-  return gulp.src('js/**/*.js')
-    .pipe(plumber({
-      errorHandler: function (error) {
-        console.log(error.message);
-        this.emit('end');
-    }}))
+gulp.task('bs-reload', function () {
+  browserSync.reload();
+});
+
+gulp.task('css', function () {
+  var postCssOpts = [
+    autoprefixer({ browsers: ['last 2 versions', '> 2%'] }),
+    mqpacker,
+    cssnano,
+  ];
+
+  return gulp.src(folder.src + 'scss/main.scss')
+    .pipe(sass({
+      outputStyle: 'compressed',
+      errLogToConsole: true,
+    }))
+    .pipe(postcss(postCssOpts))
+    .pipe(gulp.dest(folder.build + 'css/'))
+    .pipe(browserSync.reload({ stream: true }));
+});
+
+gulp.task('js', function (){
+  return gulp.src(
+    [
+      folder.src + 'js/lazysizes.js',
+      folder.src + 'js/main.js',
+      folder.src + 'js/**/*.js',
+
+    ])
     .pipe(concat('main.js'))
-    .pipe(babel())
-    .pipe(gulp.dest('public/assets/js/'))
-    .pipe(rename({suffix: '.min'}))
+    .pipe(stripdebug())
     .pipe(uglify())
-    .pipe(gulp.dest('public/assets/js/'))
+    .pipe(gulp.dest(folder.build + 'js/'))
+    .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task('default', function(){
-  gulp.watch("scss/**/*.scss", ['styles']);
-  gulp.watch("js/**/*.js", ['scripts']);
+// run all tasks
+gulp.task('run', ['css', 'js']);
+
+gulp.task('watch', ['browser-sync'], function (){
+  // javascript changes
+  gulp.watch(folder.src + 'js/**/*', ['js']);
+  // css changes
+  gulp.watch(folder.src + 'scss/**/*', ['css']);
 });
 
-gulp.task('build', function(){
-  gulp.run('styles', 'scripts');
-});
+// default task
+gulp.task('default', ['run', 'watch']);
