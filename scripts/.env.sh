@@ -53,12 +53,12 @@ REMOTE_SSH_LOGIN="forge@188.166.210.0"
 REMOTE_SSH_PORT="22"
 
 # Remote path constants; paths should always have a trailing /
-REMOTE_ROOT_PATH="/srv/users/serverpilot/apps/jeremy/"
+REMOTE_ROOT_PATH="/srv/users/serverpilot/apps/genesis/"
 REMOTE_ASSETS_PATH=${REMOTE_ROOT_PATH}"public/assets/"
 
 # Remote database constants
-REMOTE_DB_NAME="jbp"
-REMOTE_DB_PASSWORD="b73d039f9ec6d369"
-REMOTE_DB_USER="4ca980007398"
+REMOTE_DB_NAME="genesis"
+REMOTE_DB_PASSWORD="blode123"
+REMOTE_DB_USER="mblode"
 REMOTE_DB_HOST="localhost"
 REMOTE_DB_PORT="3306"
