@@ -24,88 +24,96 @@
   </div>
 </header>
 
-<div class="section grey">
+<div class="section">
   <div class="container">
     <div class="row">
-      <div class="col">
-        <h2 class="text-center mb-medium">Our services</h2>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-12 col-md-6 col-lg-5 mb-3 offset-lg-1">
-        <div class="card card-service hov">
-          <a href="{{siteUrl}}minecraft">
-            <div class="card-block">
-              <h3 class="card-title">Minecraft Hosting</h3>
-              <h3>$1.00 <span class="small">/ month</span></h3>
-              <hr>
-              <ul>
-                <li>Unlimited Slots</li>
-                <li>SSD Disks</li>
-                <li>Free DDoS</li>
-                <li>Multicraft Support</li>
-                <li>Daily Backups</li>
-                <li>100 Mbps Speeds</li>
-              </ul>
-              <hr>
-              <button class="btn btn-primary btn-block btn-lg mt-2">Get started</button>
-            </div>
-          </a>
-        </div>
+      <div class="col-12 text-center mb-medium">
+        <h2 class="mt-medium">Minecraft Server Hosting</h2>
       </div>
 
-      <div class="col-sm-12 col-md-6 col-lg-5 mb-3">
-        <div class="card card-service hov">
-          <a href="{{siteUrl}}hosting">
-            <div class="card-block">
-              <h3 class="card-title">Website Hosting</h3>
-              <h3>$2.00 <span class="small">/ month</span></h3>
-              <hr>
-              <ul>
-                <li>Unlimited bandwidth</li>
-                <li>HDD Disks</li>
-                <li>Free DDoS</li>
-                <li>CPanel Interface</li>
-                <li>Daily Backups</li>
-                <li>99.9% Uptime</li>
-              </ul>
-              <hr>
-              <button class="btn btn-primary btn-block btn-lg mt-2">Get started</button>
+      {% for entry in craft.entries.section('homepage') %}
+        {% for block in entry.features %}
+          {% if block.type == "feature" %}
+            <div class="col-6 col-md-4 home-feature text-center mt-medium">
+              {% set image = block.photo.first() %}
+              <img src="{{image.url}}" alt="{{image.title}}" width="72px" class="mb-3">
+              <h4 class="mb-2">{{block.featureName}}</h4>
+              <p>{{block.text}}</p>
             </div>
-          </a>
-        </div>
-      </div>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
     </div>
   </div>
 </div>
 
-<div class="section container">
+<div class="container section">
   <div class="row">
-    <div class="col">
-      <h2 class="text-center">Our stats</h2>
-      <hr>
+    <div class="col text-center">
+      <h2>Choose your plan to get started</h2>
     </div>
   </div>
-  <div class="row text-center stats">
-  {% for block in entry.stats %}
-    {% if block.type == "customer" %}
+</div>
+
+{% if entry.pricing | length %}
+  <div class="container-fluid mb-large">
+    <div class="PriceBlocks-sliderContainer PriceBlocks-slider--standalone">
+      <div class="PriceBlocks-slider PriceBlocks-slider--standard">
+        {% for row in entry.pricing %}
+          <div class="PriceBlock-container">
+            <div class="PriceBlock">
+              <div class="PriceBlock-top">
+                <div class="u-flex u-flexCenter PriceBlock-price">
+                  <span class="PriceBlock-dollar">$</span>
+                  <span class="PriceBlock-num">{{row.price}}</span>
+                  <span class="PriceBlock-time">/mo</span>
+                </div>
+              </div>
+              <ul class="u-list u-textPrimary u-textLarge PriceBlock-list">
+                <li><strong class="u-textPrimary">{{row.ram}}GB</strong> Ram</li>
+                <li><strong class="u-textPrimary">{{row.slots}}</strong> Slots</li>
+                <li><strong class="u-textPrimary">{{row.disk}}</strong> Disk</li>
+                <li><strong class="u-textPrimary">{{row.ddos}}</strong> DDoS</li>
+              </ul>
+              <div class="u-flex u-flexCenter PriceBlock-btn">
+                <a href="{{row.url}}" class="btn btn-outline-primary" target="_blank">Order</a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+<div class="section grey">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2 class="text-center">Our stats</h2>
+        <hr>
+      </div>
+    </div>
+    <div class="row text-center stats">
+    {% for block in entry.stats %}
+      {% if block.type == "customer" %}
+        <div class="col">
+          <h3>{{block.number}}</h3>
+          <p>{{block.customerTitle}}</p>
+        </div>
+      {% elseif block.type == "services" %}
       <div class="col">
         <h3>{{block.number}}</h3>
-        <p>{{block.customerTitle}}</p>
+        <p>{{block.servicesTitle}}</p>
       </div>
-    {% elseif block.type == "services" %}
-    <div class="col">
-      <h3>{{block.number}}</h3>
-      <p>{{block.servicesTitle}}</p>
+      {% elseif block.type == "ram" %}
+      <div class="col">
+        <h3>{{block.number}}</h3>
+        <p>{{block.ramTitle}}</p>
+      </div>
+      {% endif %}
+    {% endfor %}
     </div>
-    {% elseif block.type == "ram" %}
-    <div class="col">
-      <h3>{{block.number}}</h3>
-      <p>{{block.ramTitle}}</p>
-    </div>
-    {% endif %}
-  {% endfor %}
   </div>
 </div>
 
