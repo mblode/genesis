@@ -4,8 +4,17 @@ $(document).ready(function () {
   $('.alert').alert();
 
   var $carousel = $('.PriceBlocks-slider').flickity({
+    accessibility: true,
     cellSelector: '.PriceBlock-container',
     initialIndex: 2,
+    arrowShape: {
+      x0: 10,
+      x1: 60,
+      y1: 50,
+      x2: 65,
+      y2: 45,
+      x3: 20,
+    },
   });
 
   var flkty = $carousel.data('flickity');
