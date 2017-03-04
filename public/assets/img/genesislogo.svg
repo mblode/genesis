@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="286px" height="286px" viewBox="0 0 286 286" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="34" y="34" width="217.173687" height="217.173687" rx="40"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="217.173687" height="217.173687" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard">
+            <use id="Rectangle" stroke="#3D464D" mask="url(#mask-2)" stroke-width="24" fill="#E3EEFC" transform="translate(142.586843, 142.586843) rotate(-315.000000) translate(-142.586843, -142.586843) " xlink:href="#path-1"></use>
+            <g id="Group" transform="translate(122.000000, 116.000000)" fill="#007EE5">
+                <rect id="Rectangle-3" x="0" y="0" width="12" height="54" rx="6"></rect>
+                <rect id="Rectangle-3" x="30" y="0" width="12" height="54" rx="6"></rect>
+            </g>
+            <rect id="Rectangle-2" fill="#007EE5" transform="translate(102.024622, 105.024622) rotate(-45.000000) translate(-102.024622, -105.024622) " x="42.9359775" y="99.0246216" width="118.177288" height="12" rx="6"></rect>
+            <rect id="Rectangle-2-Copy" fill="#007EE5" transform="translate(181.024622, 184.024622) rotate(-45.000000) translate(-181.024622, -184.024622) " x="121.935978" y="178.024622" width="118.177288" height="12" rx="6"></rect>
+            <rect id="Rectangle-2-Copy-3" fill="#007EE5" transform="translate(175.241203, 143.428918) rotate(-360.000000) translate(-175.241203, -143.428918) " x="123" y="137.428918" width="104.482406" height="12" rx="6"></rect>
+            <rect id="Rectangle-2-Copy-2" fill="#007EE5" transform="translate(103.341028, 182.083215) rotate(-135.000000) translate(-103.341028, -182.083215) " x="44.2523838" y="176.083215" width="118.177288" height="12" rx="6"></rect>
+        </g>
+    </g>
+</svg>
