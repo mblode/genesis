@@ -20,7 +20,7 @@ hr.blue {
 }
 
 .header {
-  background: url("../img/minecraft-bg.jpg") no-repeat;
+  background: url("{{ siteUrl }}assets/img/minecraft-bg.jpg") no-repeat;
   background-size: cover;
   height: calc(100vh - 54px);
   display: flex;
