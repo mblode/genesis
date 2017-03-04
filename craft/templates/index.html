@@ -18,9 +18,11 @@
 <header class="header white text-center">
   <div class="container headline">
     <div class="row">
-      <div class="col-12 col-lg-8 offset-lg-2 ">
-        {{entry.tagline | typogrify}}
-        <a class="btn btn-outline-white mt-3 btn-lg mr-2" href="#more">Learn more!</a>
+      <div class="col-12 col-lg-8 offset-lg-2">
+        <div class="mb-3">
+          {{entry.tagline | typogrify}}
+        </div>
+        <a class="btn btn-outline-white mt-3 btn-lg mr-2" href="#more">Learn more <div class="caret"></div></a>
         <a class="btn btn-outline-white mt-3 btn-lg ml-2" href="#plans">Minecraft Plans</a>
       </div>
     </div>

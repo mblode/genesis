@@ -29,8 +29,7 @@ a:active .btn-success {
   border: 1px solid darken($accent, 10) !important;
 }
 
-
-.btn.white a{
+.btn.white a {
   color: $white !important;
 }
 
@@ -50,12 +49,27 @@ a:active .btn-success {
   color: $white;
   transition: $trans;
 
+  .caret {
+    background: url("../../assets/img/chevron-down-white.svg") no-repeat;
+    background-position: center;
+    width: 1.25em;
+    height: 1.25em;
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 0;
+    transition: $trans;
+  }
+
   &:hover,
   &:focus,
   &:active {
     background: $white;
     border: 1px solid $white;
     color: $primary;
+
+    .caret {
+      background-image: url("../../assets/img/chevron-down-primary.svg");
+    }
   }
 }
 

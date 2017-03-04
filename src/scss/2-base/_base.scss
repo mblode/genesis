@@ -7,11 +7,11 @@ b {
 }
 
 .white-secondary {
-  color: rgba(255, 255, 255, .7);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 hr.white {
-  border-top: 1px solid rgba(255, 255, 255, .12);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 hr.blue {
@@ -20,7 +20,7 @@ hr.blue {
 }
 
 .header {
-  background: url("{{ siteUrl }}assets/img/minecraft-bg.jpg") no-repeat;
+  background: url(../../assets/img/minecraft-bg.jpg) no-repeat;
   background-size: cover;
   height: calc(100vh - 54px);
   display: flex;

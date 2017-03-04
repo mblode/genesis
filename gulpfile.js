@@ -43,6 +43,9 @@ gulp.task('css', function () {
 gulp.task('js', function (){
   return gulp.src(
     [
+      folder.src + 'js/jquery.js',
+      folder.src + 'js/bootstrap.js',
+      folder.src + 'js/flickity.js',
       folder.src + 'js/lazysizes.js',
       folder.src + 'js/main.js',
       folder.src + 'js/**/*.js',
