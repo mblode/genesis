@@ -1,31 +1,43 @@
 <footer>
   <div class="container">
     <div class="row">
-      <div class="col-sm-12 text-center">
-        <h4 class="white">Genesis Hosting Co.</h4>
-        <p class="small white-secondary">Copyright &copy; Genesis {{ "now"|date("Y") }} &middot; All rights reserved</p>
-        <a href="http://www.dmca.com/Protection/Status.aspx?ID=1fcc6c31-bed9-403d-8085-38be8af9b8a1" title="DMCA.com Protection Status" class="dmca-badge"> <img src="//images.dmca.com/Badges/dmca_protected_16_120.png?ID=1fcc6c31-bed9-403d-8085-38be8af9b8a1" alt="DMCA.com Protection Status"></a> <script src="//images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
-        <hr class="white">
+      <div class="col-12 col-md-3 text-center">
+        <p class="white text-uppercase"><b>Genesis Hosting Co.</b></p>
+        <hr class="blue">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link mb-2" href="http://www.dmca.com/Protection/Status.aspx?ID=1fcc6c31-bed9-403d-8085-38be8af9b8a1">&copy; {{ "now"|date("Y") }} &middot; All rights reserved</a></li>
+          </li>
+          <li class="nav-item"><a href="http://www.dmca.com/Protection/Status.aspx?ID=1fcc6c31-bed9-403d-8085-38be8af9b8a1" title="DMCA.com Protection Status" class="dmca-badge"> <img src="//images.dmca.com/Badges/dmca_protected_16_120.png?ID=1fcc6c31-bed9-403d-8085-38be8af9b8a1" alt="DMCA.com Protection Status"></a>
+          </li>
+          <script src="//images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
+        </ul>
       </div>
-      <div class="col-sm-12 hidden-sm-down">
-        <ul class="nav justify-content-center">
-          <li class="nav-item"><a class="nav-link" href="{{siteUrl}}">Home</a></li>
+      <div class="col-12 col-md-3 text-center">
+        <p class="white text-uppercase"><b>Products</b></p>
+        <hr class="blue">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link" href="{{siteUrl}}">Minecraft</a></li>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="{{siteUrl}}">Web Hosting</a></li>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-3 text-center">
+        <p class="white text-uppercase"><b>Company</b></p>
+        <hr class="blue">
+        <ul class="nav flex-column">
           <li class="nav-item"><a class="nav-link" href="{{siteUrl}}partner">Partners</a></li>
           <li class="nav-item"><a class="nav-link" href="{{siteUrl}}sponsorship">Sponsorship</a></li>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-3 text-center">
+        <p class="white text-uppercase"><b>Legal</b></p>
+        <hr class="blue">
+        <ul class="nav flex-column">
           <li class="nav-item"><a class="nav-link" href="{{siteUrl}}privacy">Privacy</a></li>
           <li class="nav-item"><a class="nav-link" href="{{siteUrl}}terms">Terms</a>
           </li>
-          <li class="nav-item"><a class="nav-link" href="mailto:support@genesishosting.co">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <div class="col-6 col-sm-6 hidden-md-up">
-        <ul class="nav flex-column">
-          <li class="nav-item"><a class="nav-link" href="{{siteUrl}}index">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="{{siteUrl}}partner">Partners</a></li>
-          <li class="nav-item"><a class="nav-link" href="{{siteUrl}}sponsorship">Sponsorship</a></li>
-          <li class="nav-item"><a class="nav-link" href="{{siteUrl}}privacy">Privacy &amp; Terms</a></li>
-          <li class="nav-item"><a class="nav-link" href="mailto:support@genesishosting.co">Contact Us</a></li>
         </ul>
       </div>
     </div>

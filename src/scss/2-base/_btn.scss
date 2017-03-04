@@ -45,6 +45,20 @@ a:active .btn-success {
   }
 }
 
+.btn-outline-white {
+  border: 1px solid $white;
+  color: $white;
+  transition: $trans;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: $white;
+    border: 1px solid $white;
+    color: $primary;
+  }
+}
+
 .btn-outline-success {
   border: 1px solid $accent;
   color: $accent;

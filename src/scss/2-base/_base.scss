@@ -14,9 +14,27 @@ hr.white {
   border-top: 1px solid rgba(255, 255, 255, .12);
 }
 
+hr.blue {
+  border-top: 3px solid $primary;
+  width: 100px;
+}
+
 .header {
-  padding-bottom: $xx-large;
-  padding-top: $xx-large;
+  background: url("../img/minecraft-bg.jpg") no-repeat;
+  background-size: cover;
+  height: calc(100vh - 54px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.coupon {
+  position: absolute;
+  top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 
 .final {
