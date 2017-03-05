@@ -31,14 +31,14 @@ return array(
     'live'  => array(
         'devMode' => false,
         'enableTemplateCaching' => true,
-        'allowAutoUpdates' => false,
+        'allowAutoUpdates' => true,
     ),
 
     // Staging (pre-production) environment
     'staging'  => array(
         'devMode' => false,
         'enableTemplateCaching' => true,
-        'allowAutoUpdates' => false,
+        'allowAutoUpdates' => true,
     ),
 
     // Local (development) environment
