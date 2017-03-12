@@ -48,6 +48,10 @@ hr.blue {
   padding-top: $x-large;
 }
 
+.bg-white {
+  background: #fff;
+}
+
 .grey {
   background: $light-grey;
 }
@@ -152,10 +156,13 @@ hr.blue {
 }
 
 .mt-medium {
-  margin-bottom: 32px;
+  margin-top: 32px;
 }
 
 .mb-medium {
   margin-bottom: 32px;
 }
 
+.shadow-medium {
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.12);
+}
