@@ -1,0 +1,25 @@
+{% extends "_layouts/site" %}
+
+{% block main %}
+
+<div class="container mt-3 mb-3">
+  <div class="row">
+    <div class="col-xs-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+      <h1 class="mt-3 mb-3">Terms of service</h1>
+
+      {% for block in entry.text %}
+
+        {% if block.type == "heading" %}
+
+          <h3 class="mt-3">{{ block.heading | typogrify }}</h3>
+
+        {% elseif block.type == "body" %}
+
+          {{ block.body }}
+
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

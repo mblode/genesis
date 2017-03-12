@@ -49,7 +49,7 @@ LOCAL_MYSQLDUMP_CMD="mysqldump"
 # -- REMOTE settings --
 
 # Remote ssh credentials, user@domain.com and Remote SSH Port
-REMOTE_SSH_LOGIN="forge@128.199.179.17"
+REMOTE_SSH_LOGIN="forge@139.162.20.93"
 REMOTE_SSH_PORT="22"
 
 # Remote path constants; paths should always have a trailing /
@@ -57,8 +57,8 @@ REMOTE_ROOT_PATH="/home/forge/genesishosting.co/"
 REMOTE_ASSETS_PATH=${REMOTE_ROOT_PATH}"public/assets/"
 
 # Remote database constants
-REMOTE_DB_NAME="genesishosting"
+REMOTE_DB_NAME="genesis"
 REMOTE_DB_PASSWORD="blode123"
-REMOTE_DB_USER="craft"
+REMOTE_DB_USER="mblode"
 REMOTE_DB_HOST="localhost"
 REMOTE_DB_PORT="3306"
