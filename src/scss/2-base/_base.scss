@@ -22,7 +22,8 @@ hr.blue {
 .header {
   background: url(../../assets/img/minecraft-bg.jpg) no-repeat;
   background-size: cover;
-  height: calc(100vh - 54px);
+  height: calc(100vh - 84px);
+  min-height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;
