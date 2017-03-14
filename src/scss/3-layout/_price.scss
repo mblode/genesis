@@ -167,8 +167,8 @@
 
 //PrevNext
 .flickity-prev-next-button {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   background: transparent;
   z-index: 400;
 }
@@ -179,6 +179,14 @@
 
 .flickity-prev-next-button .arrow {
   fill: $primary;
+}
+
+.flickity-prev-next-button.previous {
+  left: -10px;
+}
+
+.flickity-prev-next-button.next {
+  right: -10px;
 }
 
 .flickity-prev-next-button.no-svg {

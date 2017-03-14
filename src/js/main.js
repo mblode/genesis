@@ -44,12 +44,17 @@ $(document).ready(function () {
     var previousSlide = flkty.slides[flkty.selectedIndex - 1];
     var nextSlide = flkty.slides[flkty.selectedIndex + 1];
 
-    nextSlide.getCellElements().forEach(function (cellElem) {
-      cellElem.classList['add']('is-next');
-    }); 
-    previousSlide.getCellElements().forEach(function ( cellElem ) {
-      cellElem.classList['add']('is-previous');
-    });
+    if (nextSlide) {
+      nextSlide.getCellElements().forEach(function (cellElem) {
+        cellElem.classList['add']('is-next');
+      });
+    }
+
+    if (previousSlide) {
+      previousSlide.getCellElements().forEach(function ( cellElem ) {
+        cellElem.classList['add']('is-previous');
+      });
+    }
   });
 
   $('a[href*="#"]:not([href="#"])').click(function() {
