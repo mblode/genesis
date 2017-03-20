@@ -36,7 +36,8 @@ Thumbs.db
 /build/*
 
 /.env.php
-/public/_github.php
-/scripts/.env.sh
+public/_github.php
 yarn.lock
 /public/imager
+
+scripts/.env.sh
