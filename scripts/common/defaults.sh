@@ -1,6 +1,6 @@
-# Craft Scripts Environment
+# Craft Scripts Defaults
 #
-# Local environmental config for nystudio107 Craft scripts
+# Default settings for Craft scripts
 #
 # @author    nystudio107
 # @copyright Copyright (c) 2017 nystudio107
@@ -8,9 +8,6 @@
 # @package   craft-scripts
 # @since     1.1.0
 # @license   MIT
-#
-# This file should be renamed to '.env.sh' and it should reside in the
-# `scripts` directory.  Add '.env.sh' to your .gitignore.
 
 # -- GLOBAL settings --
 
@@ -26,12 +23,12 @@ GLOBAL_DB_BACKUPS_MAX_AGE=90
 # -- LOCAL settings --
 
 # Local path constants; paths should always have a trailing /
-LOCAL_ROOT_PATH="/Users/mblode/Sites/genesis/"
-LOCAL_ASSETS_PATH=${LOCAL_ROOT_PATH}"public/assets/img/"
+LOCAL_ROOT_PATH="REPLACE_ME"
+LOCAL_ASSETS_PATH=${LOCAL_ROOT_PATH}"REPLACE_ME"
 
 # Local user & group that should own the Craft CMS install
-LOCAL_CHOWN_USER="mblode"
-LOCAL_CHOWN_GROUP="staff"
+LOCAL_CHOWN_USER="admin"
+LOCAL_CHOWN_GROUP="apache"
 
 # Local directories relative to LOCAL_ROOT_PATH that should be writeable by the $CHOWN_GROUP
 LOCAL_WRITEABLE_DIRS=(
@@ -51,9 +48,9 @@ LOCAL_CRAFT_FILE_DIRS=(
                 )
 
 # Local database constants
-LOCAL_DB_NAME="genesis"
-LOCAL_DB_PASSWORD="blode123"
-LOCAL_DB_USER="mblode"
+LOCAL_DB_NAME="REPLACE_ME"
+LOCAL_DB_PASSWORD="REPLACE_ME"
+LOCAL_DB_USER="REPLACE_ME"
 LOCAL_DB_HOST="localhost"
 LOCAL_DB_PORT="3306"
 
@@ -67,22 +64,22 @@ LOCAL_MYSQL_CMD="mysql"
 LOCAL_MYSQLDUMP_CMD="mysqldump"
 
 # Local backups path; paths should always have a trailing /
-LOCAL_BACKUPS_PATH="/Users/mblode/Sites/backups/"
+LOCAL_BACKUPS_PATH="/tmp/"
 
 # -- REMOTE settings --
 
 # Remote ssh credentials, user@domain.com and Remote SSH Port
-REMOTE_SSH_LOGIN="139.162.20.93"
+REMOTE_SSH_LOGIN="REPLACE_ME"
 REMOTE_SSH_PORT="22"
 
 # Remote path constants; paths should always have a trailing /
-REMOTE_ROOT_PATH="/home/forge/genesishosting.co/"
-REMOTE_ASSETS_PATH=${REMOTE_ROOT_PATH}"public/assets/img/"
+REMOTE_ROOT_PATH="REPLACE_ME"
+REMOTE_ASSETS_PATH=${REMOTE_ROOT_PATH}"REPLACE_ME"
 
 # Remote database constants
-REMOTE_DB_NAME="genesis"
-REMOTE_DB_PASSWORD="blode123"
-REMOTE_DB_USER="mblode"
+REMOTE_DB_NAME="REPLACE_ME"
+REMOTE_DB_PASSWORD="REPLACE_ME"
+REMOTE_DB_USER="REPLACE_ME"
 REMOTE_DB_HOST="localhost"
 REMOTE_DB_PORT="3306"
 
@@ -96,4 +93,5 @@ REMOTE_MYSQL_CMD="mysql"
 REMOTE_MYSQLDUMP_CMD="mysqldump"
 
 # Remote backups path; paths should always have a trailing /
-REMOTE_BACKUPS_PATH="/home/forge/backups/"
+REMOTE_BACKUPS_PATH="/tmp/"
+
