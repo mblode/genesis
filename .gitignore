@@ -14,7 +14,7 @@
 
 # CRAFT ENVIRONMENT
 .env.php
-.env.sh
+scritps/.env.sh
 .env
 
 # CRAFT STORAGE
