@@ -72,7 +72,7 @@ LOCAL_BACKUPS_PATH="/Users/mblode/Sites/backups/"
 # -- REMOTE settings --
 
 # Remote ssh credentials, user@domain.com and Remote SSH Port
-REMOTE_SSH_LOGIN="forge@139.162.20.93"
+REMOTE_SSH_LOGIN="forge@45.32.243.136"
 REMOTE_SSH_PORT="22"
 
 # Remote path constants; paths should always have a trailing /
