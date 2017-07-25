@@ -40,10 +40,10 @@
         {% for block in entry.features %}
           {% if block.type == "feature" %}
             <div class="col-12 col-sm-6 col-md-4 home-feature text-center mt-medium">
-              {% set image = block.photo.first() %}
-              <img src="{{image.url}}" alt="{{image.title}}" width="72px" class="mb-3">
-              <h4 class="mb-2">{{block.featureName}}</h4>
-              <p>{{block.text}}</p>
+              {# {% set image = block.photo.first() %}
+              <img src="{{image.url}}" alt="{{image.title}}" width="72px" class="mb-3"> #}
+              <p class="mb-2">{{block.featureName}}</p>
+              {# <p>{{block.text}}</p> #}
             </div>
           {% endif %}
         {% endfor %}
